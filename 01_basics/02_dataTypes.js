@@ -89,6 +89,8 @@ const user = {
   age: 20,
 };
 
+console.table(user);
+
 
 // Arrays
 
