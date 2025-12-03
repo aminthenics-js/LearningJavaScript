@@ -53,5 +53,8 @@ console.log(typeof myObj);
   
 
   const myFunction = function() {
-    console.log(typeof myFunction);    
+    console.log("Hello world!");    
   }
+
+   console.log(typeof myFunction);
+   
