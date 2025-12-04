@@ -57,4 +57,41 @@ console.log(typeof myObj);
   }
 
    console.log(typeof myFunction);
+
+
+
+   // Stack Memory (Primitive) and Heap Memory (Reference)
    
+
+   // 1. STACK MEMORY → fast, fixed, ordered
+   // 2. HEAP MEMORY → flexible, dynamic, expandable
+   
+   let myInstaName = "instagram_user"
+   let myFacebookName = myInstaName
+myFacebookName = "facebook_user"
+
+console.log(myInstaName);
+console.log(myFacebookName);
+
+
+  let firstUser = {
+    email: "user@google.com",
+    paypal: "user@paypal.com"
+  }
+
+  let secondUser = (firstUser);       // NOTE: Assigning objects like this copies the REFERENCE, not the data.
+                                      // Any changes to 'secondUser' will also change 'firstUser'.
+secondUser.email = ("newuser@google.com");
+  
+console.log(firstUser.email);
+console.log(secondUser.email);       
+
+let anotherUser = {
+  email: "anotheruser@google.com",
+}
+
+let otherUser = {...anotherUser}  // Use {...firstUser} or Object.assign({}, firstUser) to create a real copy.
+otherUser.email = "myuser@gmail.com";
+
+console.log(anotherUser);
+console.log(otherUser);
