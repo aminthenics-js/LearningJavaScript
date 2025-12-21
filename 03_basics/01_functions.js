@@ -53,3 +53,14 @@
       }
 
       console.log(loginUserMessage("Aminthenics"));
+
+
+      function itemInCart(numberOfItems){
+        if(!numberOfItems){
+          return "Your cart is empty"
+        }
+        return `You have ${numberOfItems} items in your cart`
+      }
+
+      console.log(itemInCart(5))
+      
