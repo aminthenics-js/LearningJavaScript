@@ -1,0 +1,21 @@
+{
+  "name": "learningjavascript",
+  "version": "1.0.0",
+  "description": "<br> Author - Aminur Rahman",
+  "main": "index.js",
+  "scripts": {
+    "test": "node 03_basics/03_arrow.js",
+    "start": "node 03_basics/03_arrow.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aminthenics-js/LearningJavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aminthenics-js/LearningJavaScript/issues"
+  },
+  "homepage": "https://github.com/aminthenics-js/LearningJavaScript#readme"
+}
