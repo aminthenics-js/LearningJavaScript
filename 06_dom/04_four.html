@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Edit & Remove elements</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+    <script>
+        function addLanguage(langName){
+            const li = document.createElement('li');
+            li.innerHTML = `${langName}`;
+            document.querySelector('.language').appendChild(li)
+        }
+        addLanguage("Rust")
+        addLanguage("Assembly")
+
+        function addOptimisedLang(langName){
+            const liItem = document.createElement('li');
+            liItem.appendChild(document.createTextNode(langName))
+            document.querySelector('.language').appendChild(liItem)
+        }
+
+        addOptimisedLang("TypeScript")
+        addOptimisedLang("C")
+
+
+
+                // Edit element
+
+        const secondLang = document.querySelector("li:nth-child(2)");
+        const newli = document.createElement('li');
+        newli.textContent = "Aminur"
+        secondLang.replaceWith(newli)
+
+
+            // Replace element
+
+        const firstLang = document.querySelector("li:first-child");
+        firstLang.outerHTML = "<li>Golang</li>"
+
+
+            // Remove element
+
+        const lastLang = document.querySelector("li:last-child");
+        lastLang.remove()
+
+    </script>
+
+</html>
