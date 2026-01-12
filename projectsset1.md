@@ -87,7 +87,7 @@ setInterval(function () {
 
 ```
 
-## Project - 03 | 
+## Project - 04 | Guess The Number
 
 ```javascript
 
@@ -183,6 +183,73 @@ function newGame() {
     playGame = true;
   })
 }
+
+
+```
+
+
+## Project 5 | Keyboard Check
+
+```javascript
+
+const insert = document.querySelector('#insert');
+
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+    <div class='color'>
+    <table>
+    <tr>
+      <th>Key</th>
+      <th>Keycode</th> 
+      <th>Code</th>
+    </tr>
+    <tr>
+      <td>${e.key === ' ' ? 'Space' : e.key}</td>
+      <td>${e.keyCode}</td> 
+      <td>${e.code}</td>
+    </tr>
+    
+  </table>
+    </div>
+  `;
+});
+
+
+```
+
+
+## Project 6 | Unlimited Colors
+
+```javascript
+
+const randomColor = function () {
+  const hexValue = '0123456789ABCDEF';
+  let color = '#';
+  for (i = 0; i < 6; i++) {
+    color += hexValue[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+let intervalID;
+
+const startChangingColor = function () {
+  if (!intervalID) {
+    intervalID = setInterval(changeBgColor, 1000);
+  }
+
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+
+const stopChangingColor = function () {
+  clearInterval(intervalID);
+  intervalID = null;
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
 
 
 ```
